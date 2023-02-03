@@ -1,10 +1,11 @@
 const { parse } = require('csv-parse/sync');
+const { ServerError } = require('../utils/errors');
 
 const EXTERNAL_API_ROOT = 'http://54.167.46.10';
 
 const companyApiService = {
   /**
-   * Retrieve CSV data from external API, about a company.
+   * Fetch CSV data from external API, about a company.
    * @param {string} url 
    */
   getParsedCsvFromURL: async (url) => {
@@ -12,11 +13,12 @@ const companyApiService = {
       method: 'GET'
     }).then((response) => response.text());
 
-    return parse(csvData, { columns: true });
+    const jsObj = parse(csvData, { columns: true });
+    return jsObj;
   },
 
   /**
-   * Retreive information about one company with given ID.
+   * Fetch information about one company with given ID.
    * @param {string} companyId 
    */
   getCompanyDetailsById: async (companyId) => {
@@ -37,6 +39,10 @@ const companyApiService = {
       method: 'GET'
     }).then(res => res.json());
     
+    if (companySectorInfo.error !== undefined) {
+      throw new ServerError(`Error while interacting with API. Failed to fetch information on sector ${sectorName} - error: ${companySectorInfo.error}.`, 500);
+    }
+
     return companySectorInfo;
   }
 };
