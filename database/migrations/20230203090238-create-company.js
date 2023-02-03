@@ -5,7 +5,11 @@ module.exports = {
     await queryInterface.createTable('Companies', {
       id: {
         allowNull: false,
+        autoIncrement: true,
         primaryKey: true,
+        type: Sequelize.INTEGER
+      },
+      companyId: {
         type: Sequelize.STRING
       },
       name: {
@@ -14,11 +18,11 @@ module.exports = {
       ceo: {
         type: Sequelize.STRING
       },
-      numberEmployees: {
-        type: Sequelize.BIGINT
-      },
       description: {
         type: Sequelize.TEXT
+      },
+      numberEmployees: {
+        type: Sequelize.BIGINT
       },
       score: {
         type: Sequelize.FLOAT

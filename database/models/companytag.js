@@ -10,8 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-      CompanyTag.belongsToMany(models.Company);
+      CompanyTag.belongsToMany(models.Company, { through: 'CompanyAndTags' });
     }
   }
   CompanyTag.init({

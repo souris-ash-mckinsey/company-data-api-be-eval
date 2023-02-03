@@ -10,15 +10,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-      Company.belongsToMany(models.CompanyTag);
+      Company.belongsToMany(models.CompanyTag, { through: 'CompanyAndTags' });
     }
   }
   Company.init({
+    companyId: DataTypes.STRING,
     name: DataTypes.STRING,
     ceo: DataTypes.STRING,
-    numberEmployees: DataTypes.INTEGER,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    numberEmployees: DataTypes.BIGINT,
     score: DataTypes.FLOAT
   }, {
     sequelize,
