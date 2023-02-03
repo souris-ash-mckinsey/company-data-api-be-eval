@@ -1,0 +1,32 @@
+[{
+  "companyId": "8888888888-888888-009900-999999999",
+  "performanceIndex": [{
+      "key": "cpi",
+      "value": 0.2
+  }, {
+      "key": "cf",
+      "value": 30000
+  },{
+      "key": "mau",
+      "value": 0.1
+  },{
+      "key": "roic",
+      "value": 20
+  }]
+},
+{
+"companyId": "9999999999-999998-009900-999999999",
+  "performanceIndex": [{
+      "key": "cpi",
+      "value": 0.2
+  }, {
+      "key": "cf",
+      "value": 50000
+  },{
+      "key": "mau",
+      "value": 0.1
+  },{
+      "key": "roic",
+      "value": 20
+  }]
+}]

@@ -1,0 +1,22 @@
+[
+  {
+    "company_id": "95b5a067-808a-44a9-a490-b4ef8a045f61",
+    "company_sector": "Automobile"
+  },
+  {
+    "company_id": "46e1d061-e39d-4d5c-8e0e-3fa5d45d9efc",
+    "company_sector": "Software"
+  },
+  {
+    "company_id": "728ae3b7-89dd-41eb-9608-4fc20c839d4c",
+    "company_sector": "Automobile"
+  },
+  {
+    "company_id": "8727cc61-8c4b-4285-8853-2db808392c04",
+    "company_sector": "Software"
+  },
+  {
+    "company_id": "e90a7bc7-47fa-49af-bfa1-391fe7768b56",
+    "company_sector": "Software"
+  }
+]
