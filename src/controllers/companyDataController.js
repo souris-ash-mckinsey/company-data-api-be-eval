@@ -10,7 +10,6 @@ const { ServerError } = require('../utils/errors');
  */
 const saveCompanyDataController = async (req, res) => {
   try {
-    console.log(req.body);
     const companyList = await companyApiService.getParsedCsvFromURL(req.body.urlLink);
 
     const companyObjs = [];
@@ -30,7 +29,6 @@ const saveCompanyDataController = async (req, res) => {
       if (!(sectorName in bySector)) {
         bySector[sectorName] = await companyApiService.getCompaniesBySector(companyIdSector.company_sector);      
       }
-      console.log(companyId);
       
       const perfIndex = bySector[sectorName].filter((companyDetail) => companyDetail.companyId == companyId)[0]
         ?.performanceIndex;
