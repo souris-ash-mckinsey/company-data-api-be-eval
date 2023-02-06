@@ -20,12 +20,6 @@ const companyDbService = {
         await company.addCompanyTag(companyTag);
       }
     }
-  },
-
-  addMany: async (companyObj) => {
-    for await (const obj of companyObj) {
-      this.companyDbService.add(obj);
-    }
   }
 };
 
