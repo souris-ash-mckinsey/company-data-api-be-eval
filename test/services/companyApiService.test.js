@@ -43,13 +43,13 @@ describe('External Company API interaction service', () => {
 
       const fetchSpy = jest.spyOn(global, 'fetch').mockImplementation(() => { }).mockResolvedValue(
         {
-          json: jest.fn(() => { }).mockResolvedValue(sampleCompanyInfo)
+          json: jest.fn(() => { }).mockResolvedValue(sampleCompanyInfo[dummyCompanyId])
         }
       );
 
       const resObj = await companyApiService.getCompanyDetailsById(dummyCompanyId);
       expect(fetchSpy).toBeCalledWith(dummyURL, { method: 'GET' });
-      expect(resObj).toStrictEqual(sampleCompanyInfo);
+      expect(resObj).toStrictEqual(sampleCompanyInfo[dummyCompanyId]);
     });
   });
 

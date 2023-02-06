@@ -1,0 +1,65 @@
+[
+  {
+    "companyId": "95b5a067-808a-44a9-a490-b4ef8a045f61",
+    "performanceIndex": [
+      {
+        "key": "cpi",
+        "value": 0.46
+      },
+      {
+        "key": "cf",
+        "value": 523763
+      },
+      {
+        "key": "mau",
+        "value": 0.05
+      },
+      {
+        "key": "roic",
+        "value": 5.66
+      }
+    ]
+  },
+  {
+    "companyId": "9232234as-808a-44a9-a490-b4ef8a045f61",
+    "performanceIndex": [
+      {
+        "key": "cpi",
+        "value": 0.09
+      },
+      {
+        "key": "cf",
+        "value": 840511
+      },
+      {
+        "key": "mau",
+        "value": 0.31
+      },
+      {
+        "key": "roic",
+        "value": 16.62
+      }
+    ]
+  },
+  {
+    "companyId": "728ae3b7-89dd-41eb-9608-4fc20c839d4c",
+    "performanceIndex": [
+      {
+        "key": "cpi",
+        "value": 0.69
+      },
+      {
+        "key": "cf",
+        "value": 508273
+      },
+      {
+        "key": "mau",
+        "value": 0.9
+      },
+      {
+        "key": "roic",
+        "value": 7.2
+      }
+    ]
+  }
+]
